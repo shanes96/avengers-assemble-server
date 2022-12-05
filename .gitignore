@@ -1,0 +1,2 @@
+curl -L -s 'https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore' > .gitignore
+echo '*.sqlite3' >> .gitignore

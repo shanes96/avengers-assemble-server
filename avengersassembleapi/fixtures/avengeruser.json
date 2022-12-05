@@ -1,0 +1,12 @@
+[
+    {
+        "model": "avengersassembleapi.avengeruser",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "bio": "I can do this all day!",
+            "favorite_comics":"spiderman",
+            "favorite_movies": "iron man"
+        }
+    }
+]
