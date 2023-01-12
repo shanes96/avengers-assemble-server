@@ -1,0 +1,62 @@
+[
+    {
+        "model": "avengersassembleapi.comic",
+        "pk": 1,
+        "fields": {
+            "comic_id":82970,
+            "comic_title":"Marvel Previews (2017)",
+            "comic_picture":"http://i.annihil.us/u/prod/marvel/i/mg/c/80/5e3d7536c8ada",
+            "comic_extension":"jpg"
+        }
+    },
+    {
+        "model": "avengersassembleapi.comic",
+        "pk": 2,
+        "fields": {
+            "comic_id":101358,
+            "comic_title":"Amazing Spider-Man: Facsimile Edition (2022) #1",
+            "comic_picture":"http://i.annihil.us/u/prod/marvel/i/mg/c/80/633cefe9900ea",
+            "comic_extension":"jpg"
+        }
+    },
+    {
+        "model": "avengersassembleapi.comic",
+        "pk": 3,
+        "fields": {
+            "comic_id":81303,
+            "comic_title":"Amazing Fantasy Facsimile Edition (2019) #1",
+            "comic_picture":"http://i.annihil.us/u/prod/marvel/i/mg/7/00/5d924ca64c787",
+            "comic_extension":"jpg"
+        }
+    },
+    {
+        "model": "avengersassembleapi.comic",
+        "pk": 4,
+        "fields": {
+            "comic_id":92167,
+            "comic_title":"Fantastic Four Anniversary Tribute  (2021) #1",
+            "comic_picture":"http://i.annihil.us/u/prod/marvel/i/mg/c/70/6214fa8b6fb7c",
+            "comic_extension":"jpg"
+        }
+    },
+    {
+        "model": "avengersassembleapi.comic",
+        "pk": 5,
+        "fields": {
+            "comic_id":105661,
+            "comic_title":"Black Panther (2021) #13 (Variant)",
+            "comic_picture":"http://i.annihil.us/u/prod/marvel/i/mg/9/a0/639cf50d4c0e9",
+            "comic_extension":"jpg"
+        }
+    },
+    {
+        "model": "avengersassembleapi.comic",
+        "pk": 6,
+        "fields": {
+            "comic_id":101529,
+            "comic_title":"Iron Man (2022) #1",
+            "comic_picture":"http://i.annihil.us/u/prod/marvel/i/mg/b/c0/639a7b035cbaa",
+            "comic_extension":"jpg"
+        }
+    }
+]

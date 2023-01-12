@@ -1,0 +1,80 @@
+[
+    {
+        "model": "avengersassembleapi.battle",
+        "pk": 1,
+        "fields": {
+            "team_1": 1,
+            "team_2": 2,
+            "number_of_votes_team_1":1,
+            "number_of_votes_team_2":1,
+            "winner":1,
+            "loser":2,
+            "user_being_challenged":2
+        }
+    },
+    {
+        "model": "avengersassembleapi.battle",
+        "pk": 2,
+        "fields": {
+            "team_1": 3,
+            "team_2": 4,
+            "number_of_votes_team_1":1,
+            "number_of_votes_team_2":1,
+            "winner":null,
+            "loser":null,
+            "user_being_challenged":4
+        }
+    },
+    {
+        "model": "avengersassembleapi.battle",
+        "pk": 3,
+        "fields": {
+            "team_1": 2,
+            "team_2": 3,
+            "number_of_votes_team_1":0,
+            "number_of_votes_team_2":2,
+            "winner":2,
+            "loser":1,
+            "user_being_challenged":3
+        }
+    },
+    {
+        "model": "avengersassembleapi.battle",
+        "pk": 4,
+        "fields": {
+            "team_1": 4,
+            "team_2": 1,
+            "number_of_votes_team_1":0,
+            "number_of_votes_team_2":0,
+            "winner":null,
+            "loser":null,
+            "user_being_challenged":1
+        }
+    },
+    {
+        "model": "avengersassembleapi.battle",
+        "pk": 5,
+        "fields": {
+            "team_1": 3,
+            "team_2": null,
+            "number_of_votes_team_1":0,
+            "number_of_votes_team_2":0,
+            "winner":null,
+            "loser":null,
+            "user_being_challenged":1
+        }
+    },
+    {
+        "model": "avengersassembleapi.battle",
+        "pk": 6,
+        "fields": {
+            "team_1": 2,
+            "team_2": 4,
+            "number_of_votes_team_1":1,
+            "number_of_votes_team_2":1,
+            "winner":null,
+            "loser":null,
+            "user_being_challenged":4
+        }
+    }
+]

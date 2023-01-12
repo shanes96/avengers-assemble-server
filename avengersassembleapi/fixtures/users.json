@@ -3,13 +3,67 @@
         "model": "auth.user",
         "pk": 1,
         "fields": {
-            "password": "pbkdf2_sha256$216000$qMRH8szID7Z8$Vljya2V3XfruOHuvx1hGz9ZyKg4bxbw7rc2WO0gTR7I=",
+            "password": "pbkdf2_sha256$390000$6GpCNAMJkkiYkGO6XhCERr$PTwXWqY1VceKskk0RA2puYkjHIz0roLzuzHIQs5e3hk=",
             "last_login": null,
             "is_superuser": false,
-            "username": "Captain Shane",
+            "username": "CaptainShane",
             "first_name": "Shane",
             "last_name": "Standifur",
             "email": "shane@gmail.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2022-08-28T14:51:39.989Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$390000$KM5ESdd5kgQSA5Wf21jABs$oMU2i2koD3OOG+ILUXyN2j4+WWR3PVdiLg9rLgmLC+I=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "CaptainAmerica",
+            "first_name": "Steve",
+            "last_name": "Rodgers",
+            "email": "captainamerica@gmail.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2022-12-21T16:37:37.055421Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$390000$HRMtmRazBeotyiYgxtkNKB$PYdAJhDGGqQ6KGfryZgsdZafcpdG2cH3WWd/rz5BaO8=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "IronMan",
+            "first_name": "Tony",
+            "last_name": "Stark",
+            "email": "ironman@gmail.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2022-08-28T14:51:39.989Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "password": "pbkdf2_sha256$390000$BGOGxtYVczIACnZjvYt82q$DGdIlmDGEQtveZPT/AOlvVkbf3zoLaezNgQTqdFglIM=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "Hulk",
+            "first_name": "Bruce",
+            "last_name": "Banner",
+            "email": "hulk@gmail.com",
             "is_staff": false,
             "is_active": true,
             "date_joined": "2022-08-28T14:51:39.989Z",
