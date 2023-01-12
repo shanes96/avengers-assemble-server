@@ -1,0 +1,82 @@
+[
+    {
+        "model": "avengersassembleapi.character",
+        "pk": 1,
+        "fields": {
+            "character_id":1011006,
+            "character_name":"Wolverine (Ultimate)",
+            "character_picture":"http://i.annihil.us/u/prod/marvel/i/mg/9/03/531773b76840c",
+            "character_extension":"jpg"
+        }
+    },
+    {
+        "model": "avengersassembleapi.character",
+        "pk": 2,
+        "fields": {
+            "character_id": 1009368,
+            "character_name":"Iron Man",
+            "character_picture":"http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55",
+            "character_extension":"jpg"
+        }
+    },
+    {
+        "model": "avengersassembleapi.character",
+        "pk": 3,
+        "fields": {
+            "character_id": 1009220,
+            "character_name":"Captain America",
+            "character_picture":"http://i.annihil.us/u/prod/marvel/i/mg/3/50/537ba56d31087",
+            "character_extension":"jpg"
+        }
+    },
+    {
+        "model": "avengersassembleapi.character",
+        "pk": 4,
+        "fields": {
+            "character_id": 1009187,
+            "character_name":"Black Panther",
+            "character_picture":"http://i.annihil.us/u/prod/marvel/i/mg/6/60/5261a80a67e7d",
+            "character_extension":"jpg"
+        }
+    },
+    {
+        "model": "avengersassembleapi.character",
+        "pk": 5,
+        "fields": {
+            "character_id": 1009652,
+            "character_name":"Thanos",
+            "character_picture": "http://i.annihil.us/u/prod/marvel/i/mg/6/40/5274137e3e2cd",
+            "character_extension":"jpg"
+        }
+    },
+    {
+        "model": "avengersassembleapi.character",
+        "pk": 6,
+        "fields": {
+            "character_id": 1014985,
+            "character_name":"Green Goblin",
+            "character_picture": "http://i.annihil.us/u/prod/marvel/i/mg/e/f0/4cd05ee55faa2",
+            "character_extension":"jpg"
+        }
+    },
+    {
+        "model": "avengersassembleapi.character",
+        "pk": 7,
+        "fields": {
+            "character_id": 1009685,
+            "character_name":"Ultron",
+            "character_picture": "http://i.annihil.us/u/prod/marvel/i/mg/3/70/5261a838e93c0",
+            "character_extension":"jpg"
+        }
+    },
+    {
+        "model": "avengersassembleapi.character",
+        "pk": 8,
+        "fields": {
+            "character_id": 1009384,
+            "character_name":"Kang",
+            "character_picture":"http://i.annihil.us/u/prod/marvel/i/mg/4/30/52695ed19538d",
+            "character_extension":"jpg"
+        }
+    }
+]

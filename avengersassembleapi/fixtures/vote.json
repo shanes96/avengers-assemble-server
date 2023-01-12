@@ -1,0 +1,83 @@
+[
+    {
+        "model": "avengersassembleapi.vote",
+        "pk": 1,
+        "fields": {
+            "user": 3,
+            "battle": 1,
+            "user_team_voted_for":2
+        }
+    },
+    {
+        "model": "avengersassembleapi.vote",
+        "pk": 2,
+        "fields": {
+            "user": 4,
+            "battle": 1,
+            "user_team_voted_for":1
+        }
+    },
+    {
+        "model": "avengersassembleapi.vote",
+        "pk": 3,
+        "fields": {
+            "user": 1,
+            "battle": 1,
+            "user_team_voted_for":1
+        }
+    },
+    {
+        "model": "avengersassembleapi.vote",
+        "pk": 4,
+        "fields": {
+            "user": 1,
+            "battle": 3,
+            "user_team_voted_for":3
+        }
+    },
+    {
+        "model": "avengersassembleapi.vote",
+        "pk": 5,
+        "fields": {
+            "user": 4,
+            "battle": 3,
+            "user_team_voted_for":3
+        }
+    },
+    {
+        "model": "avengersassembleapi.vote",
+        "pk": 6,
+        "fields": {
+            "user": 1,
+            "battle": 2,
+            "user_team_voted_for":3
+        }
+    },
+    {
+        "model": "avengersassembleapi.vote",
+        "pk": 7,
+        "fields": {
+            "user": 3,
+            "battle": 2,
+            "user_team_voted_for":4
+        }
+    },
+    {
+        "model": "avengersassembleapi.vote",
+        "pk": 8,
+        "fields": {
+            "user": 3,
+            "battle": 6,
+            "user_team_voted_for":2
+        }
+    },
+    {
+        "model": "avengersassembleapi.vote",
+        "pk": 9,
+        "fields": {
+            "user": 2,
+            "battle": 6,
+            "user_team_voted_for":4
+        }
+    }
+]

@@ -1,4 +1,3 @@
-"""View module for handling requests about categories"""
 from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
@@ -8,22 +7,12 @@ from avengersassembleapi.models import Character
 
 class CharacterView(ViewSet):
     def retrieve(self, request, pk):
-        """Handle GET requests for single post type
-
-        Returns:
-            Response -- JSON serialized post type
-        """
         user_view = Character.objects.get(pk=pk)
         serialized = CharacterSerializer(user_view, context={'request': request})
         return Response(serialized.data, status=status.HTTP_200_OK)
 
     # View all User
     def list(self, request):
-        """Handle GET requests to get all post types
-
-        Returns:
-            Response -- JSON serialized list of post types
-        """
         user_view = Character.objects.all()
         serialized = CharacterSerializer(user_view, many=True)
         return Response(serialized.data, status=status.HTTP_200_OK)
@@ -33,12 +22,19 @@ class CharacterView(ViewSet):
         user.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
-
-
+    def create(self, request):
+        character = Character.objects.create(
+            character_id=request.data['character_id'],
+            character_name=request.data['character_name'],
+            character_picture=request.data['character_picture'],
+            character_extension=request.data['character_extension']
+        )
+        serializer = CharacterSerializer(character)
+        return Response(serializer.data)
 
 class CharacterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Character
-        fields = ('id','user', 'name', 'team')
+        fields = ('id','character_id', 'character_name', 'character_picture','character_extension' )
         depth=1

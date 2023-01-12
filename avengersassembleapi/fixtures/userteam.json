@@ -1,0 +1,38 @@
+[
+    {
+        "model": "avengersassembleapi.userteam",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "team_name":"Shane's Avengers",
+            "characters":[1,2]
+        }
+    },
+    {
+        "model": "avengersassembleapi.userteam",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "team_name":"Caps Squad",
+            "characters":[4,5]
+        }
+    },
+    {
+        "model": "avengersassembleapi.userteam",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "team_name":"Tony Iron Men",
+            "characters":[7,8]
+        }
+    },
+    {
+        "model": "avengersassembleapi.userteam",
+        "pk": 4,
+        "fields": {
+            "user": 4,
+            "team_name":"Banners Team",
+            "characters":[6,3]
+        }
+    }
+]

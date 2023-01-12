@@ -5,8 +5,46 @@
         "fields": {
             "user": 1,
             "bio": "I can do this all day!",
-            "favorite_comics":"spiderman",
-            "favorite_movies": "iron man"
+            "favorite_comics":[1,3,2],
+            "favorite_movies": [1,4,6],
+            "user_wins":0,
+            "user_losses":0
+        }
+    },
+    {
+        "model": "avengersassembleapi.avengeruser",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "bio": "I can do this all day",
+            "favorite_comics":[4,6,1],
+            "favorite_movies": [3,5,2],
+            "user_wins":0,
+            "user_losses":0
+        }
+    },
+    {
+        "model": "avengersassembleapi.avengeruser",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "bio": "I am Iron Man.",
+            "favorite_comics":[6,2,5],
+            "favorite_movies": [5,1,2],
+            "user_wins":0,
+            "user_losses":0
+        }
+    },
+    {
+        "model": "avengersassembleapi.avengeruser",
+        "pk": 4,
+        "fields": {
+            "user": 4,
+            "bio": "Hulk Smash!",
+            "favorite_comics":[1,4,3],
+            "favorite_movies": [2,5,1],
+            "user_wins":0,
+            "user_losses":0
         }
     }
 ]
