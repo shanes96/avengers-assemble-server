@@ -7,6 +7,7 @@
             "bio": "I can do this all day!",
             "favorite_comics":[1,3,2],
             "favorite_movies": [1,4,6],
+            "profile_image":"https://ca.slack-edge.com/T6G3NJMK5-U02S94DBXLP-d199360ebd76-512",
             "user_wins":0,
             "user_losses":0
         }
@@ -19,6 +20,7 @@
             "bio": "I can do this all day",
             "favorite_comics":[4,6,1],
             "favorite_movies": [3,5,2],
+            "profile_image":"https://i.pinimg.com/originals/dd/6e/03/dd6e032795a2b5c9c148fd0db0f88af3.jpg",
             "user_wins":0,
             "user_losses":0
         }
@@ -31,6 +33,7 @@
             "bio": "I am Iron Man.",
             "favorite_comics":[6,2,5],
             "favorite_movies": [5,1,2],
+            "profile_image":"https://media1.popsugar-assets.com/files/thumbor/ZCWD9YXxqYzk9riO2WR2OrxzWUw/721x0:1801x1080/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2019/07/01/098/n/46207611/5d2cc4f65d1ab1d1992803.52716266_/i/Why-Tony-Stark-Best-Marvel-Character.jpg",
             "user_wins":0,
             "user_losses":0
         }
@@ -43,6 +46,7 @@
             "bio": "Hulk Smash!",
             "favorite_comics":[1,4,3],
             "favorite_movies": [2,5,1],
+            "profile_image":"https://i.pinimg.com/736x/ad/45/8b/ad458b6290d86450f2aff9890be7b67d.jpg",
             "user_wins":0,
             "user_losses":0
         }
