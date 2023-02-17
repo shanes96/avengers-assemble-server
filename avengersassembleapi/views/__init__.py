@@ -1,4 +1,4 @@
-from .auth import login_user, register_user
+from .auth import login_user, register_user, add_subscriber_to_mailchimp
 from .user_view import AvengerUserView
 from .user_team_view import UserTeamView
 from .votes_view import VoteView
@@ -9,3 +9,4 @@ from.comic_view import ComicView
 from .user_comic import UserComicView
 from .user_movie_view import UserMovieView
 from .movie_view import MovieView
+

@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.conf.urls import include
 from rest_framework import routers
 from django.urls import path
-from avengersassembleapi.views import register_user, login_user
+from avengersassembleapi.views import register_user, login_user, add_subscriber_to_mailchimp
 from avengersassembleapi.views import AvengerUserView, UserTeamView, VoteView, CharacterView, BattleView, CharacterTeamView, ComicView,UserComicView, UserMovieView,MovieView
 
 router = routers.DefaultRouter(trailing_slash=False)
@@ -19,6 +19,7 @@ router.register(r'votes', VoteView, 'vote')
 
 urlpatterns = [
     path('register', register_user),
+    path('email', add_subscriber_to_mailchimp),
     path('login', login_user),
     path('admin/', admin.site.urls),
     path('', include(router.urls)),

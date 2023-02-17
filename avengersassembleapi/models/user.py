@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 class AvengerUser(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.CharField(max_length=50, null=True, blank=True)
+    # profile_image = models.ImageField(upload_to='media', null=True, blank=True) 
     profile_image = models.CharField(max_length=50, null=True, blank=True) 
     favorite_comics = models.ManyToManyField('Comic',through="UserComic")
     favorite_movies = models.ManyToManyField('Movie',through="UserMovie")

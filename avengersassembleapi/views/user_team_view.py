@@ -51,7 +51,8 @@ class UserTeamView(ViewSet):
         team = UserTeam.objects.get(pk=pk)
         team.team_name = request.data["team_name"]
         team.save()
-        return Response(None, status=status.HTTP_204_NO_CONTENT)
+        serializer = UserTeamSerializer(team)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 class AvengerUserInfoSerializer(serializers.ModelSerializer):
 
