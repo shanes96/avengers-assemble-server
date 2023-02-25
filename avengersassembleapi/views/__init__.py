@@ -1,4 +1,4 @@
-from .auth import login_user, register_user, add_subscriber_to_mailchimp
+from .auth import login_user, register_user
 from .user_view import AvengerUserView
 from .user_team_view import UserTeamView
 from .votes_view import VoteView
