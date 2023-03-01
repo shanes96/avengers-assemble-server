@@ -1,7 +1,7 @@
 #! /usr/bin/env python3.6
 
 import os
-from flask import Flask, redirect, request
+from flask import Flask, redirect, request, jsonify
 
 import stripe
 
@@ -20,10 +20,6 @@ app = Flask(__name__,
 
 YOUR_DOMAIN = 'http://localhost:4242'
 
-@app.route('/success')
-def success():
-    return redirect('http://localhost:3000/profile')
-
 @app.route('/create-checkout-session', methods=['POST'])
 def create_checkout_session():
     try:
@@ -35,7 +31,7 @@ def create_checkout_session():
                 },
             ],
             mode='payment',
-            success_url=YOUR_DOMAIN + '/success',
+            success_url='http://localhost:3000/test-payment?success=true',
             cancel_url=YOUR_DOMAIN + '?canceled=true',
         )
     except Exception as e:
