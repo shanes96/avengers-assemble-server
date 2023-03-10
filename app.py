@@ -1,43 +1,64 @@
-#! /usr/bin/env python3.6
-
 import os
-from flask import Flask, redirect, request, jsonify
+import sys
 
 import stripe
+import django
+from django.conf import settings
+from django.http import HttpResponseBadRequest
+from django.shortcuts import redirect
+from django.views.decorators.csrf import csrf_exempt
+
+# Add the parent directory of your Django project to the system path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# Set the DJANGO_SETTINGS_MODULE environment variable
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'avengersassemble.settings')
+
+# Configure the Django settings
+django.setup()
+
+# Import the models
+from avengersassembleapi.models.cart import Cart
 
 stripe.api_key = 'secret key goes here'
-product = stripe.Product.create(name="Amazing Fantasy 15")
 
-price = stripe.Price.create(
-    product=product.id,
-    unit_amount=2000,
-    currency="usd"
-)
+YOUR_DOMAIN = 'http://localhost:8000'
 
-app = Flask(__name__,
-            static_url_path='',
-            static_folder='public')
+@csrf_exempt
+def create_checkout_session(request):
+    if request.method == 'POST':
+        try:
+            # Get the user's cart
+            cart_id = request.POST['cart_id']
+            cart = Cart.objects.get(id=cart_id)
 
-YOUR_DOMAIN = 'http://localhost:4242'
+            # Create the line items for the checkout session
+            line_items = []
+            for cart_comic in cart.comics.all():
+                line_item = {
+                    'price_data': {
+                        'currency': 'usd',
+                        'unit_amount': 1000,
+                        'product_data': {
+                            'name': cart_comic.title,
+                        },
+                    },
+                    'quantity': 1
+                }
+                line_items.append(line_item)
 
-@app.route('/create-checkout-session', methods=['POST'])
-def create_checkout_session():
-    try:
-        checkout_session = stripe.checkout.Session.create(
-            line_items=[
-                {
-                    'price': 'price_1MgX0gGHHR2V7NucxQyG7IrP',
-                    'quantity': 1,
-                },
-            ],
-            mode='payment',
-            success_url='http://localhost:3000/test-payment?success=true',
-            cancel_url=YOUR_DOMAIN + '?canceled=true',
-        )
-    except Exception as e:
-        return str(e)
+            # Create the checkout session
+            checkout_session = stripe.checkout.Session.create(
+                line_items=line_items,
+                mode='payment',
+                success_url='http://localhost:3000/test-payment?session_id={CHECKOUT_SESSION_ID}',
+                cancel_url=YOUR_DOMAIN + '?canceled=true',
+            )
 
-    return redirect(checkout_session.url, code=303)
-
-if __name__ == '__main__':
-    app.run(port=4242)
+            return redirect(checkout_session.url, code=303)
+        except (KeyError, Cart.DoesNotExist):
+            return HttpResponseBadRequest('Invalid cart ID')
+        except Exception as e:
+            return HttpResponseBadRequest(str(e))
+    else:
+        return HttpResponseBadRequest('Invalid request method')

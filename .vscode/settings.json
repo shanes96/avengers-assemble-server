@@ -5,4 +5,7 @@
         "--load-plugins=pylint_django",
         "--django-settings-module=avengersassemble.settings",
     ],
+    "cSpell.words": [
+        "avengersassembleapi"
+    ],
 }

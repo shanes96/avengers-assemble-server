@@ -8,3 +8,5 @@ from .comic import Comic
 from .user_comic import UserComic
 from .movie import Movie
 from .user_movie import UserMovie
+from .cart import Cart
+from .cart_comic import CartComic

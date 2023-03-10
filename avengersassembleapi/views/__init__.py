@@ -9,4 +9,5 @@ from.comic_view import ComicView
 from .user_comic import UserComicView
 from .user_movie_view import UserMovieView
 from .movie_view import MovieView
-
+from .cart_view import CartView
+from .payment_view import create_checkout_session

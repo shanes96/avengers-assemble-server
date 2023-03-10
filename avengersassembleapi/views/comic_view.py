@@ -35,6 +35,12 @@ class ComicView(ViewSet):
         )
         serializer = ComicSerializer(comic)
         return Response(serializer.data)
+    
+    def update(self, request, pk):
+        comic = Comic.objects.get(pk=pk)
+        comic.quantity=(request.data["quantity"])
+        comic.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
 
 class ComicSerializer(serializers.ModelSerializer):
 
