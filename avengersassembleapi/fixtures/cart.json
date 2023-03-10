@@ -1,0 +1,10 @@
+[
+    {
+        "model": "avengersassembleapi.cart",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "comics": [101358,82970]
+        }
+    }
+]

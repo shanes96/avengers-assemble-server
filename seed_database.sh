@@ -14,3 +14,4 @@ python3 manage.py loaddata character
 python3 manage.py loaddata userteam
 python3 manage.py loaddata battle
 python3 manage.py loaddata vote
+python3 manage.py loaddata cart
