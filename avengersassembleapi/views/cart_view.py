@@ -31,26 +31,22 @@ class CartView(ViewSet):
         user.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
-def create(self, request):
-    avenger_user = AvengerUser.objects.get(user=request.auth.user)
-    comic_id = Comic.objects.get(pk=request.data["comic"])
-    try:
-        cart = Cart.objects.get(user=avenger_user)
-        # check if the comic is already in the cart
-        if CartComic.objects.filter(cart=cart, comic=comic_id).exists():
-            return Response({"message": "Comic is already in the cart"})
-        else:
-            # add the comic to the existing cart
-            item = CartComic.objects.create(cart=cart, comic=comic_id)
-            serializer = CartSerializer(item)
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-    except Cart.DoesNotExist:
-        # create a new cart if one doesn't exist
-        cart = Cart.objects.create(user=avenger_user)
-        item = CartComic.objects.create(cart=cart, comic=comic_id)
-        
-        serializer = CartSerializer(item)
+    def create(self, request):
+        avenger_user = AvengerUser.objects.get(user=request.auth.user)
+        comic_id = Comic.objects.get(pk=request.data["comic"])
+        user_cart = Cart.objects.get(user=avenger_user)
+        user_cart.comics.add(comic_id)
+        serializer = CartSerializer(user_cart)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    
+def update(self, request, pk):
+    comic = Comic.objects.get(pk=pk)
+    comic.quantity=request.data["quantity"]
+    comic.save()
+    serializer = CartSerializer(comic)
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
 
 
 class CartSerializer(serializers.ModelSerializer):
