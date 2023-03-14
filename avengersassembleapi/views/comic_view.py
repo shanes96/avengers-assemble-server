@@ -32,15 +32,18 @@ class ComicView(ViewSet):
             comic_title=request.data['comic_title'],
             comic_picture=request.data['comic_picture'],
             comic_extension=request.data['comic_extension'],
+            comic_price=request.data['comic_price'],
+
         )
         serializer = ComicSerializer(comic)
         return Response(serializer.data)
     
     def update(self, request, pk):
         comic = Comic.objects.get(pk=pk)
-        comic.quantity=(request.data["quantity"])
+        comic.quantity=request.data["quantity"]
         comic.save()
-        return Response(None, status=status.HTTP_204_NO_CONTENT)
+        serializer = ComicSerializer(comic)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 class ComicSerializer(serializers.ModelSerializer):
 
