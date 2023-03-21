@@ -11,3 +11,4 @@ from .user_movie_view import UserMovieView
 from .movie_view import MovieView
 from .cart_view import CartView
 from .payment_view import create_checkout_session
+from .cart_comic_view import CartComicView, get_cart_total
