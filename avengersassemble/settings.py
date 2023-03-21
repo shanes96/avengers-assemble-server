@@ -58,6 +58,9 @@ REST_FRAMEWORK = {
     ],
 }
 
+CORS_ALLOW_ALL_ORIGINS = True
+
+
 # THIS IS NEW
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
