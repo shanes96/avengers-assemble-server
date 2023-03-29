@@ -66,7 +66,7 @@ Python 3.6 or newer required.
 from django.views.decorators.csrf import csrf_exempt, ensure_csrf_cookie
 import stripe
 # This is your test secret API key.
-stripe.api_key = 'secret key goes here'
+stripe.api_key = 'sk_test_51MgEV5GHHR2V7NucT5N8I9SXuwh2qWpD24dDuakwKi6RCP8lZyQ0W9c0SmR98bFPviWc8k8lX83yLpNcFSxoJUIX00lkHDH4U7'
 tax_rate = stripe.TaxRate.create(
   display_name="Sales Tax",
   description="Sales tax for example state",
