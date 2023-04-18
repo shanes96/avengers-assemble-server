@@ -28,5 +28,5 @@ urlpatterns = [
     path('login', login_user),
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
-    path('create-checkout-session', create_checkout_session)
+    path('create-checkout-session/<int:pk>/',create_checkout_session, name='create_checkout_session'),
 ]
