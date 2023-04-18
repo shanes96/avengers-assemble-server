@@ -5,10 +5,11 @@ class CartComic(models.Model):
     cart = models.ForeignKey("Cart", on_delete=models.CASCADE)
     comic = models.ForeignKey("Comic", on_delete=models.CASCADE, to_field="comic_id")
     quantity = models.PositiveIntegerField(default=1)
+    quantity = models.PositiveIntegerField(default=1)
 
     def comic_sub_total(self):
         return self.quantity * self.comic.comic_price 
-    
+
     @property
     def cart_sub_total(self):
         total = sum(item.comic_sub_total() for item in self.cart.cartcomic_set.all())
@@ -26,12 +27,12 @@ class CartComic(models.Model):
         sub_total = sum(item.comic_sub_total() for item in self.cart.cartcomic_set.all())
         tax_amount = sub_total * decimal.Decimal('0.06')
         return '${:.2f}'.format(tax_amount.quantize(decimal.Decimal('.01')))
-    
+
     @property
     def cart_total_quantity(self):
         total_quantity = sum(item.quantity for item in self.cart.cartcomic_set.all())
         return total_quantity
-    
+
     @property
     def comic_sub_total_with_tax(self):
         sub_total = self.comic_sub_total()
